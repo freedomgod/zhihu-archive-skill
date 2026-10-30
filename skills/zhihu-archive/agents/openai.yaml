@@ -1,0 +1,4 @@
+interface:
+  display_name: "知乎博主归档"
+  short_description: "按博主归档回答、文章与专栏，生成 Markdown 和离线阅读网页"
+  default_prompt: "使用 $zhihu-archive 归档指定知乎博主的回答、文章和专栏，并生成本地阅读网页。"

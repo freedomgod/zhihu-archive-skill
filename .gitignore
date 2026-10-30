@@ -1,0 +1,38 @@
+# Local credentials, browser state and downloaded author content
+.auth/
+secrets/
+archives/
+*-profile/
+browser-profile/
+cookie*.txt
+cookie*.json
+*cookie*.txt
+*cookie*.json
+*.cookies
+.env
+.env.*
+*.pem
+*.key
+storage-state*.json
+
+# Development output and private historical diagnostics
+output/
+local-notes/
+.pytest_cache/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+node_modules/
+.agents/
+.codex/
+.claude/
+skills-lock.json
+*.log
+.DS_Store
+Thumbs.db
+
+# Only the reproducible skill download is published
+dist/*
+!dist/zhihu-archive.zip
+!dist/SHA256SUMS

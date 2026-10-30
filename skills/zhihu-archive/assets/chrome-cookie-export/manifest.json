@@ -1,0 +1,9 @@
+{
+  "manifest_version": 3,
+  "name": "知乎 Cookie 本地导出",
+  "version": "1.0.0",
+  "description": "由用户点击，仅将知乎登录 Cookie 导出到本地文件。",
+  "permissions": ["cookies", "downloads"],
+  "host_permissions": ["https://*.zhihu.com/*"],
+  "action": {"default_popup": "popup.html", "default_title": "导出知乎 Cookie 到本地"}
+}

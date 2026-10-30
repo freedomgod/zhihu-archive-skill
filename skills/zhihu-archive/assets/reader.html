@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>$$TITLE$$ · 知乎内容归档</title>
+  <style>$$STYLES$$</style>
+</head>
+<body>
+  <header class="top">
+    <span class="brand"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 7h7l2 2h9v11H3zM3 7V4h7l2 3"/></svg>知乎博主归档</span>
+    <div class="top-actions"><span id="archive-date"></span><button id="theme" aria-label="切换深浅色主题"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 14A8 8 0 0 1 10 4a8 8 0 1 0 10 10z"/></svg><span>外观</span></button></div>
+  </header>
+  <div class="layout">
+    <aside class="sidebar" aria-label="博主信息与筛选">
+      <section class="profile">
+        <div class="profile-kicker">知乎博主</div>
+        <h1 id="author">$$TITLE$$</h1>
+        <p id="headline" class="headline"></p>
+        <a id="profile-link" target="_blank" rel="noopener noreferrer">查看知乎主页 <span aria-hidden="true">↗</span></a>
+        <div class="stats" aria-label="已保存内容数量"><div><strong id="answers">0</strong><span>回答</span></div><div><strong id="articles">0</strong><span>文章</span></div><div><strong id="columns">0</strong><span>专栏</span></div></div>
+      </section>
+      <nav class="tabs" aria-label="内容分类">
+        <button data-kind="all" aria-pressed="true"><span>全部内容</span><span id="total-count">0</span></button>
+        <button data-kind="answer" aria-pressed="false"><span>回答</span><span id="answer-count">0</span></button>
+        <button data-kind="article" aria-pressed="false"><span>文章</span><span id="article-count">0</span></button>
+      </nav>
+      <div class="sidebar-filters">
+        <label id="column-label">专栏<select id="column"><option value="">全部专栏</option></select></label>
+        <label>发布时间<select id="year"><option value="">全部年份</option></select></label>
+      </div>
+      <section class="archive-note"><div class="status" id="status"></div><p id="scope-note"></p><p id="skip-note" hidden></p></section>
+    </aside>
+    <main id="workspace" class="workspace">
+      <div class="catalog-heading"><div><p class="section-kicker">内容目录</p><h2 id="catalog-title">全部内容</h2><p id="count" role="status" aria-live="polite"></p></div><div class="search"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6"/></svg><label class="sr" for="query">搜索标题、正文或摘要</label><input id="query" type="search" placeholder="搜索标题或正文…" autocomplete="off"></div></div>
+      <div class="catalog-toolbar"><span>点击内容查看完整正文</span><label>排序<select id="sort"><option value="newest">最新发布</option><option value="oldest">最早发布</option><option value="updated">最近更新</option><option value="votes">最多赞同</option></select></label></div>
+      <section class="list-panel" aria-label="内容目录"><div class="list" id="list"></div><nav class="pager" aria-label="目录分页"><span id="page-number"></span><div><button id="prev">上一页</button><button id="next">下一页</button></div></nav></section>
+      <footer class="foot"><span>内容归原作者所有 · 保留原文来源</span><span id="footnote"></span></footer>
+    </main>
+  </div>
+  <dialog id="reading-dialog" aria-labelledby="reading-title">
+    <div class="dialog-toolbar"><button class="back" id="close-reader"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m14 6-6 6 6 6"/></svg>返回目录</button><span id="reading-author"></span><button id="print-reader" aria-label="打印当前正文"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 8V3h12v5M6 17H3V9h18v8h-3M6 14h12v7H6z"/></svg><span>打印</span></button></div>
+    <article class="reader" id="reader"></article>
+  </dialog>
+  <script type="application/json" id="archive-data">$$DATA$$</script>
+  <script>$$SCRIPT$$</script>
+</body>
+</html>
